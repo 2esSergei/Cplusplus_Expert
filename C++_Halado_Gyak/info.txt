@@ -1,0 +1,9 @@
+Uj ismeretek:
+- fomralis specifikacio, suktogram (ismetles)
+- szovegformazasi utasitasok (<iomanip>)
+- allapotellenorzes (flags)
+- filebeolvasas flag-ekkel (ismetles+flags)
+- string tipuskonverzio, azaz stringstream (<sstream>)ű
+- vector tipus (ismetles)
+- alprogramok (ismetles)
+- iterativ es rekurziv alprogramok
