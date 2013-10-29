@@ -3,7 +3,7 @@ Uj ismeretek:
 - szovegformazasi utasitasok (<iomanip>)
 - allapotellenorzes (flags)
 - filebeolvasas flag-ekkel (ismetles+flags)
-- string tipuskonverzio, azaz stringstream (<sstream>)ű
+- string tipuskonverzio, azaz stringstream (<sstream>)
 - vector tipus (ismetles)
 - alprogramok (ismetles)
 - iterativ es rekurziv alprogramok
