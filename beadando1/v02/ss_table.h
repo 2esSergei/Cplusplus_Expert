@@ -6,21 +6,19 @@ template <typename T>
 struct table{
  //matrix-table for store only
  
- int col, row;
+ int row, col;
  vector< vector<T> > data;
  table(int rows, int cols)
- : col(cols)
- , row(rows)
+ : row(rows)
+ , col(cols)
  , data(row, vector<T>(col, 0)){}
 };
 
-
-void print_t(table<int> M){
+template<typename R>
+void print_t(table<R> M){
  cout << "A tablazat tartalma:" << endl;
- int a = M.data.size();
- int b = M.data[a].size();
- for (int i = 0; i < a; i++){
-  for (int j = 0; j < b; j++){
+ for (int i = 0; i < M.data[0].size(); i++){
+  for (int j = 0; j < M.data.size(); j++){
    cout << M.data[i][j] << " ";
   }
   cout << endl;
