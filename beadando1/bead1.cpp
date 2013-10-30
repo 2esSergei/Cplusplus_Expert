@@ -1,5 +1,7 @@
 #include<iostream>
 #include<vector>
+
+#include "ss_table.h"
 using namespace std;
 
 
@@ -19,7 +21,7 @@ struct matrix{
   it++;
  }
 };
-*/
+
 
 
 
@@ -33,9 +35,9 @@ struct table{
  col(cols) , row(rows) , data(row, vector<T>(col, 0)){}
   
 };
-
-
-
+*/
+template<typename T>
+struct table;
 
 
 int main(int args, char* argv[]){
@@ -48,7 +50,8 @@ int main(int args, char* argv[]){
    for(int j=0; j<5-1; j++){ 
     cout << M.data[i][j] << " ";
    }
-  } 
+  }
+  print_t(M);
   //reader
   //searcher
  return 0;
