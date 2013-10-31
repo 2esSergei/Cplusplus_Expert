@@ -13,7 +13,11 @@ struct table;
 
 int main(int args, char* argv[]){
   //argumentum ellenorzes (ha 0 vagy betu akkor lebegopontos kivetelt dob)
+  cout << "Alkalmazott Modul - Programozas : 1. Beadando" << endl
+       << "Keszitette: Balogh Ferenc (LNBZVX)" << endl
+       << endl << "***" << endl << endl;
   if(args > 2){
+    cout << "Nagy szamu parametert kaptam az argumentumban. Feltetelezem, hogy ezek adatok es megprobalom feldolgozni." << endl;
     if( (args-2)%atoi(argv[1])!=0 ){
       cout << "A bemenet nem megfelelo! Kilepes!" << endl;
       exit(1);
@@ -28,9 +32,13 @@ int main(int args, char* argv[]){
         a++;
     }
     print_t(M);
+    cout << "Sikeres beolvasas az argumentumokbol!" << endl;
   }else{
-  //std
-  
+    if(args == 2){cout << "Egyetlen parameter lett megadva. Nincsen ilyen opcio!" << endl;}
+    cout << "Az adatok bevitele a std-bemenetrol fog tortenni, kerem kovesse az utasitasokat." << endl
+         << endl << "***" << endl << endl;
+    //reader
+    
   }
   //searcher
   return 0;
