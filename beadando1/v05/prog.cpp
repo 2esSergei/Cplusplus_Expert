@@ -10,7 +10,7 @@ using namespace std;
 template<typename T>
 struct table;
 
-
+void lin_ker(table<int>& M);
 
 int main(int args, char* argv[]){
   //argumentum ellenorzes (ha 0 vagy betu akkor lebegopontos kivetelt dob)
@@ -33,7 +33,10 @@ int main(int args, char* argv[]){
         a++;
     }
     print_t(M);
-    cout << "Sikeres beolvasas az argumentumokbol!" << endl;
+    cout << "Sikeres beolvasas az argumentumokbol!" << endl
+         << endl << "***" << endl << endl;
+    //searcher
+    lin_ker(M);
   }else{
     if(args == 2){cout << "Egyetlen parameter lett megadva. Nincsen ilyen opcio!" << endl;}
     cout << "Az adatok bevitele a std-bemenetrol fog tortenni, kerem kovesse az utasitasokat." << endl
@@ -60,7 +63,35 @@ int main(int args, char* argv[]){
     print_t(M);
     cout << "A beolvasas sikeresen megtortent!" << endl
          << endl << "***" << endl << endl;
+    //searcher
+    lin_ker(M);
   }
-  //searcher
+  //searcher - no result
+  cout << "A teljes matrixot atvizsgaltam, de nem talaltam a feltetelnek megfelelo oszlopot." << endl
+       << "A program ezzel befejezte futasat es kilep." << endl;
   return 0;
+}
+
+
+
+
+
+void lin_ker(table<int>& M){
+  //1.kereses
+  int n = M.data.size();
+  bool l = false;
+  for (int j = 0; j<n-1; j++){
+    //2.kereses
+    l = true;
+    for (int i = j+1; i<n; i++){
+      if (M.data[i][j] != 0){
+        l = false;
+      }
+    }
+    if(l){
+      cout << "Talaltunk az also haromszogben csupa nulla oszlopot, megpedig az elso ilyen: " << j+1 << "-edik oszlop." << endl
+           << "A keresest ezzel befejeztuk és a program sikeresen lefutott." << endl;
+      exit(2);
+    }
+  }
 }
