@@ -1,0 +1,11 @@
+Hany nullara vegzodik?
+  7331
+  (faktor)
+
+Mi lesz c erteke?
+  0
+  (c_erteke)
+
+Mit ir ki?
+  cba6
+  (mit_ir_ki; visszafele ertekeli ki az argumentumot)
