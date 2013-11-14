@@ -7,10 +7,8 @@ using namespace std;
 
 //using namespace bead1;
 
-template<typename T>
-struct table;
 
-void lin_ker(table<int>& M);
+void lin_ker(const table<int>& M);
 
 int main(int args, char* argv[]){
   //argumentum ellenorzes (ha 0 vagy betu akkor lebegopontos kivetelt dob)
@@ -32,7 +30,10 @@ int main(int args, char* argv[]){
       if(i%atoi(argv[1]) == atoi(argv[1])-1)
         a++;
     }
-    bead1::print_t<int>(M);
+
+    const table<int>* Mp = &M;
+
+//    bead1::print_t<int>(M);
     cout << "Sikeres beolvasas az argumentumokbol!" << endl
          << endl << "***" << endl << endl;
     //searcher
@@ -60,7 +61,8 @@ int main(int args, char* argv[]){
     cin >> s;
     if(s == "std"){bead1::read_std(M);}
     else{bead1::read_file(M);}
-    bead1::print_t<int>(M);
+    const table<int>* Mp = &M;
+//    bead1::print_t<int>(Mp);
     cout << "A beolvasas sikeresen megtortent!" << endl
          << endl << "***" << endl << endl;
     //searcher
@@ -76,7 +78,7 @@ int main(int args, char* argv[]){
 
 
 
-void lin_ker(table<int>& M){
+void lin_ker(const table<int>& M){
   //1.kereses
   int n = M.data.size();
   bool l = false;

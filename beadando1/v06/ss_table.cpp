@@ -10,8 +10,8 @@ using namespace std;
 
 namespace bead1{
 
-template<typename R>
-void print_t(table<R>& M){
+template<typename T>
+void print_t(const table<T>& M){
  cout << "A tablazat tartalma:" << endl;
  for (int i = 0; i < M.data[0].size(); i++){
   for (int j = 0; j < M.data.size(); j++){

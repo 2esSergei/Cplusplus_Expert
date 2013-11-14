@@ -21,7 +21,7 @@ struct table{
 namespace bead1{
 
 template<typename S>
-void print_t(table<S>&);
+void print_t(const table<S>&);
 
 void read_std(table<int>&);
 
