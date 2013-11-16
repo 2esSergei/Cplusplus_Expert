@@ -3,13 +3,13 @@
 
 using namespace std;
 
-int* CreateObject(){
-  return (rand() % 2) == 0 ? NULL : new int;
+string* CreateObject(){
+  return (rand() % 2) == 0 ? NULL : new string;
 }
 
 
 int main(){
-  int* obj = CreateObject();
+  string* obj = CreateObject();
   if(obj){}
   cout << obj;
   delete obj;
