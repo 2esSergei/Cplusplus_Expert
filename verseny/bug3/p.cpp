@@ -4,7 +4,7 @@
 using namespace std;
 
 string* CreateObject(){
-  return (rand() % 2) == 0 ? NULL : new string;
+  return (0 % 2) == 0 ? NULL : new string;
 }
 
 
