@@ -51,25 +51,6 @@ std::ostream& operator<<(std::ostream& S, const ss_rectangle& N){
 }
 
 
-const bool ss_rectangle::ss_eq_csucs(const ss_rectangle& N){
-  for(int i=0; i<4; i++){
-    for (int j=0; j<4; j++){
-      if((*this)(i) == N(j))
-        return true;
-    }
-  }
-  return false;
-}
-
-
-const bool ss_rectangle::ss_eq_csucs(const ss_point& P){
-  for(int i=0; i<4; i++)
-    if((*this)(i) == P)
-      return true;
-  return false;
-}
-
-
 const float ss_rectangle::ss_ter(){
   //terulet
   return (std::abs(((*this)(0)).ss_tav((*this)(1)))) * (std::abs(((*this)(0)).ss_tav((*this)(4))));
@@ -87,6 +68,4 @@ const bool ss_rectangle::ss_p_benne(const ss_point& P){
   if(std::abs(P.x - A.x) <= std::abs(C.x - A.x) && std::abs(P.y - A.y) <= std::abs(C.y - A.y))
     return true;
   else return false;
-
-
 }

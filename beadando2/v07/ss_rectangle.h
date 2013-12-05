@@ -18,8 +18,8 @@ class ss_rectangle{
   ss_point operator()(int i) const;
   friend std::istream& operator>>(std::istream&, ss_rectangle&);
   friend std::ostream& operator<<(std::ostream&, const ss_rectangle&);
-  const bool ss_eq_csucs(const ss_rectangle& N);
-  const bool ss_eq_csucs(const ss_point& N);
+
+
   const float ss_ter();
   const float ss_ker();
   const bool ss_p_benne(const ss_point& P);
