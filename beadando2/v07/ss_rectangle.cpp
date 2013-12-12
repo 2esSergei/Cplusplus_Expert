@@ -65,7 +65,9 @@ const float ss_rectangle::ss_ker(){
 
 const bool ss_rectangle::ss_p_benne(const ss_point& P){
   //pont-tartalmazas
-  if(std::abs(P.x - A.x) <= std::abs(C.x - A.x) && std::abs(P.y - A.y) <= std::abs(C.y - A.y))
+  /*if(std::abs(P.x - A.x) <= std::abs(C.x - A.x) && std::abs(P.y - A.y) <= std::abs(C.y - A.y))
+    return true;*/
+  if(A.x <= P.x && P.x <=  C.x && A.y <= P.y && P.y <= C.y)
     return true;
   else return false;
 }
