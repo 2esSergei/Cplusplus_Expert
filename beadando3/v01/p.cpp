@@ -2,6 +2,7 @@
 #include<cstdlib>
 #include<fstream>
 #include<string>
+#include<vector>
 #include"ss_lenyek.h"
 
 using namespace std;
@@ -69,7 +70,7 @@ int main(int args, char* argv[]){
   lepegeto l;
   int hossz = sizeof(napok.c_str())/(sizeof(*(napok.c_str())))-2; 
   cout << "Meretek: " << sizeof(napok.c_str())/(sizeof(*(napok.c_str()))) << " xxx " << napok.c_str()[2]<<  sizeof(v1)/sizeof(*v1) << " " << sizeof(v2)/sizeof(*v2) << endl;
-  for(int i=0; i < t4; i++){ 
+  for(int i=0; i < 3; i++){ 
     cout << "cilkus megy: " << t4 << endl;
     FL >> sx;
     cout << i+4 << " ok sx " << sx << endl;
@@ -110,9 +111,19 @@ int main(int args, char* argv[]){
   t2++;
   t3++;
   //A file tartalma beolvasva
-
-
-
+  vector<lenyek*> v;
+  v.push_back(&(v1[0]));
+  v.push_back(&(v2[0]));
+  cout << *(v[0]);
+  cout << *(v[1]);
+  for(int i=0; i< 2; i++){
+  sx = "";
+  cin >> sx;
+  lenyek* x = new homok(sx, 5);
+  
+  v.push_back(x);
+  cout << *(v[i+2]);
+  }
 
 
 
