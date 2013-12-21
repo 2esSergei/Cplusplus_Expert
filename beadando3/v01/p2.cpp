@@ -31,7 +31,7 @@ int main(int args, char* argv[]){
 
   string napok = "";
   int temp1, temp2;
-  char k;
+  char c;
   ifstream FL;
   FL.open(argv[1]);
   if(FL.fail()){
@@ -46,7 +46,6 @@ int main(int args, char* argv[]){
     exit(0);
   }
   string st;
-  char c;
   vector<lenyek*> v;
   for(int i=0; i<temp2; i++){
     st = "";
@@ -70,6 +69,7 @@ int main(int args, char* argv[]){
                   break;}
     }
   }
+  FL.close();
   //A file tartalma beolvasva
 
 
