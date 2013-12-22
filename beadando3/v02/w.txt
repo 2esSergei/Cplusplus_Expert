@@ -1,0 +1,12 @@
+nnffenfenfenfefnnnef 10
+a l 10
+b h 3
+c h 5
+d s 20
+e s 10
+f l 2
+g h 12
+h h 30
+i h -2
+j l 11
+k s 22
